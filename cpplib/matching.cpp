@@ -39,7 +39,6 @@ class Matching{
     
     int maxMatchingCount,iter;
     Matching(int _n,int _m): n(_n),m(_m){
-        //other initialization 
         pa=vector<int>(n,-1);
         pb=vector<int>(m,-1);
         G=vector<vector<int> > (n);
@@ -54,7 +53,6 @@ class Matching{
     }
     bool hasAlternatingPath(int u){
         visited[u]=iter;
-        //shorter path first
         for(int v:G[u]){
             if (pb[v]==-1){
                 pb[v]=u;
@@ -95,7 +93,7 @@ int main(){
     ios_base::sync_with_stdio(false); 
     cin.tie(NULL);  
 
-    //usages example
+    //usage 
     int N=3,M=5;
     Matching bpm(N,M);
     bpm.addEdge(2,3);
